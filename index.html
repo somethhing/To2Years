@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendship Wrapped</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      overflow: hidden;
+      background: linear-gradient(135deg, #000000, #1a1a1a, #2b0f1a);
+      color: white;
+    }
+    .slide {
+      display: none;
+      height: 100vh;
+      width: 100vw;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 20px;
+    }
+    .active {
+      display: flex;
+      animation: fade 1s;
+    }
+    @keyframes fade {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    img, video {
+      max-width: 90%;
+      max-height: 70%;
+      border-radius: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 30px rgba(255, 105, 180, 0.3);
+    }
+    .romantic {
+      color: #ff7aa2;
+      font-style: italic;
+    }
+    button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      padding: 15px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      background: #1db954;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 1. INTRO -->
+<div class="slide active">
+  <h1>Your Friendship Wrapped ✨</h1>
+  <p class="romantic">Some people just become home.</p>
+</div>
+
+<!-- 2. DM IMAGE -->
+<div class="slide">
+  <h2>Sometimes Heart Attacks are worth it Bestie😝</h2>
+  <img src="dm.jpg" alt="">
+</div>
+
+<!-- 3. VIDEO -->
+<div class="slide">
+  <h2>My First time posting you (as friends ofc)</h2>
+  <video src="video1.mp4" autoplay muted loop playsinline></video>
+</div>
+
+
+<!-- 4. VIDEO -->
+<div class="slide">
+  <h2>First Trend Bestie😝(as friends ofc)</h2>
+  <video src="video2.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<!-- 5. VIDEO -->
+<div class="slide">
+  <h2>Idek what this was but we tuff af fr</h2>
+  <video src="video3.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<!-- 6. VIDEO -->
+<div class="slide">
+  <h2>OUR DATE(as besties ofc)</h2>
+  <video src="video4.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<!-- 7. PHOTO COMPARISON -->
+<div class="slide">
+  <h2>Then Vs Now (OMAGAHA WE HAVE COME A LONG WAY sorry for the picture bestie)</h2>
+  <img src="Presentation1.jpg" alt="">
+</div>
+
+<!-- TEXT SLIDE -->
+<div class="slide">
+  <h2 style="font-size:3rem; max-width:800px; line-height:1.4;">
+    Hello bestie ik we have had our diffrences for the past few days but remeber my love, we were friends befor, lovers after, so glad i spent **ALMOST** 2 Years with you speaking everyday. I could not be happier for us to have come so long the people in the previous slides would have not belived we were dating no way. Here's to two years of togetherness bestie i love you as a friend and as a lover Forever
+    <br><br>
+    For I Hope our Love and Friendship echoes through eternity
+  </h2>
+</div>
+
+<!-- 8. QR -->
+<div class="slide">
+  <h2>Oh and a last suprise, come back here the same time we texted for a nice chatpati kichidi😝</h2>
+</div>
+
+<button onclick="nextSlide()">Next →</button>
+
+<script>
+  let current = 0;
+  const slides = document.querySelectorAll('.slide');
+
+  function nextSlide() {
+    slides[current].classList.remove('active');
+    current = (current + 1) % slides.length;
+    slides[current].classList.add('active');
+  }
+
+  document.body.addEventListener('click', nextSlide);
+</script>
+
+</body>
+</html>
